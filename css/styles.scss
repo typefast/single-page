@@ -1,0 +1,121 @@
+/*variables*/
+
+$textColor: #eee;
+$anchorHover: darken( rgba(30,30,30, .75), 10%);
+$padding: 1em;
+$margin: 1em;
+$header1: 2em;
+$paragraphSize: 1.3em;
+
+/*Mixins*/
+
+@mixin keyframes($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{animationName} {
+		@content;
+	}
+}
+
+html {
+		min-height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	background: url('../images/mount.jpg') no-repeat;
+	background-position: top;
+	background-size: cover;
+}
+
+.wrapper {
+	margin: 0 auto;
+	text-align: center;
+}
+
+header {
+	width: 100%;
+	position: relative;
+
+	ul {
+		background: rgba(30,30,30, .75);
+
+		li {
+			display: inline-block;
+			margin: 0 .5em;
+
+			a {
+				color: $textColor;
+				text-decoration: none;
+				display: block;
+				padding: 1em 1em;
+
+				&:hover {
+					background-color: $anchorHover;
+					transition: all 1s;
+				}
+			}
+		}
+	}
+
+	h1 {
+		color: $textColor;
+		padding: $padding;
+		font-size: $header1;
+	}
+	
+	#fadeIn {
+		font-family: Open Sans;
+		color: darken($textColor, 10%);
+		background-color: rgba(30,30,30, .2);
+		font-size: $paragraphSize;
+		margin: $margin * 3;
+		padding: $padding;
+		display: inline-block;
+
+		
+
+		@include keyframes(fadeIn) {
+			0% {
+				opacity: 0;
+				
+			}
+			100% {
+				opacity: 1;
+				
+			}
+
+		}
+		animation: fadeIn 3s ease;
+	}
+
+	div {
+		position: absolute;
+		margin-top: $margin * 10;
+		font-size: $paragraphSize;
+		color: $textColor;
+		background: rgba(30,30,30, .5);
+		padding: $padding 0;
+		min-width: 100%;
+
+		@include keyframes(fadeLeft) {
+			0% {
+				opacity: 0;
+				left: -1000px;
+			}
+			100% {
+			opacity: 1;
+			left: 0;
+			}
+		}
+		animation: fadeLeft 3s ease;
+
+		p {
+			padding: $padding * 2;
+		}
+	}
+}

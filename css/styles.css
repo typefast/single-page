@@ -1,0 +1,93 @@
+/*variables*/
+/*Mixins*/
+html {
+  min-height: 100%; }
+
+body {
+  font-family: sans-serif;
+  background: url("../images/mount.jpg") no-repeat;
+  background-position: top;
+  background-size: cover; }
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center; }
+
+header {
+  width: 100%;
+  position: relative; }
+  header ul {
+    background: rgba(30, 30, 30, 0.75); }
+    header ul li {
+      display: inline-block;
+      margin: 0 .5em; }
+      header ul li a {
+        color: #eee;
+        text-decoration: none;
+        display: block;
+        padding: 1em 1em; }
+        header ul li a:hover {
+          background-color: rgba(5, 5, 5, 0.75);
+          transition: all 1s; }
+  header h1 {
+    color: #eee;
+    padding: 1em;
+    font-size: 2em; }
+  header #fadeIn {
+    font-family: Open Sans;
+    color: #d5d5d5;
+    background-color: rgba(30, 30, 30, 0.2);
+    font-size: 1.3em;
+    margin: 3em;
+    padding: 1em;
+    display: inline-block;
+    animation: fadeIn 3s ease; }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes animationName {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  header div {
+    position: absolute;
+    margin-top: 10em;
+    font-size: 1.3em;
+    color: #eee;
+    background: rgba(30, 30, 30, 0.5);
+    padding: 1em 0;
+    min-width: 100%;
+    animation: fadeLeft 3s ease; }
+@-webkit-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    left: -1000px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@-moz-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    left: -1000px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@keyframes animationName {
+  0% {
+    opacity: 0;
+    left: -1000px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+    header div p {
+      padding: 2em; }
+
+/*# sourceMappingURL=styles.css.map */
